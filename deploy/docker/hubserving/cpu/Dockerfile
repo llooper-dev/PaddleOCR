@@ -1,5 +1,5 @@
 # Version: 2.0.0
-FROM registry.baidubce.com/paddlepaddle/paddle:2.0.0
+FROM registry.baidubce.com/paddlepaddle/paddle:2.2.2
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' > /etc/timezone
@@ -8,9 +8,8 @@ RUN pip3.7 install --upgrade pip -i https://mirror.baidu.com/pypi/simple
 
 RUN pip3.7 install paddlehub --upgrade -i https://mirror.baidu.com/pypi/simple
 
-RUN git version
-RUN git clone https://gitee.com/jianfulove/PaddleOCR.git
 RUN git clone https://gitee.com/jianfulove/PaddleOCR.git /PaddleOCR
+RUN ls -al  /PaddleOCR
 
 WORKDIR /PaddleOCR
 
