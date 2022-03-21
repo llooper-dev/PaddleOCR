@@ -31,7 +31,7 @@ def read_params():
 
     #params for text recognizer
     cfg.rec_algorithm = "CRNN"
-    cfg.rec_model_dir = "./inference/my_rec_pp-OCRv2_distill_20200315/"
+    cfg.rec_model_dir = "./inference/my_rec_pp-OCRv2_distill_20200321/"
 
     cfg.rec_image_shape = "3, 32, 320"
     cfg.rec_char_type = 'ch'
