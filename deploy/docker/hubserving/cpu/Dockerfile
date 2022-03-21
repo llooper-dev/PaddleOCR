@@ -25,8 +25,8 @@ ADD https://bos1.aifacen.com/openaifacen/stor/20220319/ch_ppocr_mobile_v2.0_cls_
 RUN tar xf /PaddleOCR/inference/ch_ppocr_mobile_v2.0_cls_infer.tar -C /PaddleOCR/inference/
 
 # Download orc recognition model(light version). If you want to change normal version, you can change ch_ppocr_mobile_v2.0_rec_infer to ch_ppocr_server_v2.0_rec_infer, also remember change rec_model_dir in deploy/hubserving/ocr_system/params.py）
-ADD https://bos1.aifacen.com/openaifacen/stor/20220321/my_rec_pp-OCRv2_distill_20200321.tgz /PaddleOCR/inference/
-RUN tar -zvxf /PaddleOCR/inference/my_rec_pp-OCRv2_distill_20200321.tgz -C /PaddleOCR/inference/
+ADD https://bos1.aifacen.com/openaifacen/stor/20220321/rec_chinese_common_train_v2.0_v20210821.tar /PaddleOCR/inference/
+RUN tar -vxf /PaddleOCR/inference/rec_chinese_common_train_v2.0_v20210821.tar -C /PaddleOCR/inference/
 
 EXPOSE 8868
 
